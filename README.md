@@ -19,7 +19,7 @@ Proyecto escrito en Rustlang usando:
  - O(1): búsqueda de las ciudades en el hashmap
  - O(m): búsqueda del índice real de laciudad
  - O(1): búsqueda de la ciudad en la respuesta de la api ([Vec get en rust](https://doc.rust-lang.org/std/collections/index.html#sequences))
-  Total: O(n+m)
+ - Total: O(n+m)
   
 # Forma de ejecutar
 Ponerce en la raíz y ejecutar:
