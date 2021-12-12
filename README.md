@@ -14,11 +14,11 @@ Proyecto escrito en Rustlang usando:
 - Con el índice en la lista del HashMap se obtiene el el índice real de la respuesta de la API y con ello la información de pronóstico de la ciudad.
 
 ## Complejidad
-  Si n son la cantidad de datos en la respuesta de la API y m la cantidad máxima de ciudades en una provincia, entonces:
-  -O(n): creación del mapa.
-  -O(1): búsqueda de las ciudades en el hashmap
-  -O(m): búsqueda del índice real de laciudad
-  -O(1): búsqueda de la ciudad en la respuesta de la api ([Vec get en rust](https://doc.rust-lang.org/std/collections/index.html#sequences))
+ Si n son la cantidad de datos en la respuesta de la API y m la cantidad máxima de ciudades en una provincia, entonces:
+ - O(n): creación del mapa.
+ - O(1): búsqueda de las ciudades en el hashmap
+ - O(m): búsqueda del índice real de laciudad
+ - O(1): búsqueda de la ciudad en la respuesta de la api ([Vec get en rust](https://doc.rust-lang.org/std/collections/index.html#sequences))
   Total: O(n+m)
   
 # Forma de ejecutar
