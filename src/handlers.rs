@@ -95,7 +95,7 @@ fn province_selector(province_cities_index_map: &HashMap<String, Vec<usize>>) ->
     let parsed_province_index: usize = match api_response_province_index.trim().parse() {
         Ok(province_index) => province_index,
         Err (_) => {
-            return bad_input(Some(io::Error::new(io::ErrorKind::InvalidInput, "No se puede convertir el input a número")));
+            return bad_input(Some(io::Error::new(io::ErrorKind::InvalidInput, config::PARSE_ERROR)));
         }
     };
     let province_name =  match province_cities_index_map.keys().nth(parsed_province_index){

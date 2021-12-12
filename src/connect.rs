@@ -30,15 +30,15 @@ pub struct Weather {
 
 // api call function, it parse the response to an ApiResponse struct
 pub async fn api_call(forecast: String) -> Result<Vec<ApiResponse>, reqwest::Error> {
-    let unwraped_response = reqwest::get(format!("{}{}", config::API_URL, forecast))
+    let wrapped_response = reqwest::get(format!("{}{}", config::API_URL, forecast))
         .await;
-    let unwraped_parsed_response = match unwraped_response {
+    let wrapped_parsed_response = match wrapped_response {
         Ok(response) => response
             .json::<Vec::<ApiResponse>>()
             .await,
         Err(e) => { return Err(e); },
     };
-    let response = match unwraped_parsed_response {
+    let response = match wrapped_parsed_response {
         Ok(r) => r,
         Err(e) => { return Err(e); }
     };
