@@ -29,10 +29,10 @@ Ponerce en la raíz y ejecutar:
 Algunos supuestos para la realización del proyecto fueron:
 - El programa finaliza cuando la información del pronóstico de la ciudad es entregada.
 - Si los inputs son inválidos (no son números enteros positivos o están fuera de rango), el programa emite un mensaje de error y vuelve a preguntar por un input hasta que el usuario otorgue uno válido o cancele el programa.
-- La api siempre funciona (No hay un retry). Si la llamada a la api de pronóstico falla, el programa finalzia con un mensaje de error.
+- La api siempre funciona (No hay un retry). Si la llamada a la api de pronóstico falla, el programa finaliza con un mensaje de error.
 # Notas y cosas que mejorar
 
-- Se usa `.unwrap()` en vez de manejar como corresponde los enums Options o Result, sólo en las veces que se sabe con certeza que el valor existe.
+- A veces se usa `.unwrap()` en vez de manejar como corresponde los enums Options o Result. Esto sólo se hace en las veces que se sabe con certeza que el valor existe y es válido.
 - Se usa un `.clone()` para construir las llaves del HashMap al ser de tipo String. Esto es debido a que tanto la respuesta de la API como el HashMap necesitan los nombres de las provisias simultáneamente, por lo tanto no se puede hacer `borrow` del valor.
 ## Cosas que mejorar:
 - Agregar un retry a la llamada de la API
